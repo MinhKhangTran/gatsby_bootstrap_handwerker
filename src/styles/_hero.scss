@@ -1,0 +1,44 @@
+#hero {
+  .hero_overlay::before {
+    content: "";
+    position: absolute;
+    background: rgba($color: #1c1917, $alpha: 0.6);
+    inset: 5%;
+  }
+  .hero_article {
+    position: absolute;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  #hero {
+    height: calc(100vh - 64px);
+
+    .hero_overlay::before {
+      content: "";
+      position: absolute;
+      background: rgba($color: #1c1917, $alpha: 0.6);
+      top: 20%;
+      bottom: 20%;
+      left: 10%;
+      right: 50%;
+    }
+    .hero_img {
+      height: 100%;
+    }
+    .hero_article {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 10%;
+      right: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
