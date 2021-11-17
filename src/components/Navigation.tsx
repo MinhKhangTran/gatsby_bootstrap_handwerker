@@ -1,28 +1,59 @@
 import { Link } from "gatsby";
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Nav, Navbar, Button, Offcanvas } from "react-bootstrap";
+import Logo from "../images/LOGO.svg";
+import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar bg="primary-lighter" expand="lg">
       <Container>
         <Link to="/" className="navbar-brand text-primary">
-          NavbarBrand
+          <img src={Logo} alt="The handwerker logo" />
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" data-cy="nav_button" />
-        <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
-          <Nav className="me-auto align-lg-items-center">
-            <Nav.Link href="#hero">Home</Nav.Link>
-            <Nav.Link href="#menu">Features</Nav.Link>
-            <Nav.Link href="#gallery">Project</Nav.Link>
-            <Link className="nav-link" to="/about">
-              About
-            </Link>
-          </Nav>
-          <a className="btn btn-outline-primary" href="#contact">
-            Contact
-          </a>
-        </Navbar.Collapse>
+        <Button variant="outline-primary" onClick={handleShow}>
+          <FaBars size="1.3em" />
+          <span className="visually-hidden">Navigation Toggler</span>
+        </Button>
+
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title className="text-primary">Menü</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="me-auto gap-2 fs-5">
+              <Link onClick={handleClose} className="nav-link" to="/#hero">
+                Home
+              </Link>
+              <Link onClick={handleClose} className="nav-link" to="/#features">
+                Merkmale
+              </Link>
+              <Link onClick={handleClose} className="nav-link" to="/#process">
+                Prozess
+              </Link>
+              <Link
+                onClick={handleClose}
+                className="nav-link"
+                to="/#testimonials"
+              >
+                Testimonials
+              </Link>
+              <Link onClick={handleClose} className="nav-link" to="/#faq">
+                FAQ
+              </Link>
+              <Link onClick={handleClose} className="nav-link" to="/#team">
+                Unser Team
+              </Link>
+              <a className="btn btn-primary mt-3" href="#contact">
+                Kontakt
+              </a>
+            </Nav>
+          </Offcanvas.Body>
+        </Offcanvas>
       </Container>
     </Navbar>
   );

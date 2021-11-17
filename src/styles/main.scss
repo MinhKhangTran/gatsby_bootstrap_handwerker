@@ -1,16 +1,16 @@
 // load custom font from google fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @import "~bootstrap/scss/functions";
 // redefine variables not dependent on anything else
 
 // global variables
+$primary: #198754;
 
 // theme color variables
 
 // font family
-$font-family-base: 'Roboto', sans-serif;
-
+$font-family-base: "Roboto", sans-serif;
 
 // links
 
@@ -41,10 +41,40 @@ $green-colors: (
   }
 }
 
+// custom theme colors
+$custom-theme-colors: (
+  "primary-lighter": $green-100,
+  "primary-light": $green-300,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// workaround for new colors added/removed from theme colors
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge(
+  $theme-colors-rgb,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color),
+  )
+);
+
+$utilities-text-colors: map-loop(
+  $utilities-colors,
+  rgba-css-var,
+  "$key",
+  "text"
+);
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // utility api - import utility file first
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "~bootstrap/scss/bootstrap";
+
+body {
+  background: #fafaf9;
+}
 
 //import custom components
 @import "./footer";
