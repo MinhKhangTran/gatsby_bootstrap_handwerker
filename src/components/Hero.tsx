@@ -13,6 +13,7 @@ const Hero = () => {
           alt="Hero Image"
           src="../images/hero.jpg"
           formats={["auto", "webp", "avif"]}
+          placeholder="tracedSVG"
         />
         <div className="hero_overlay">
           <article className="text-white hero_article">
@@ -37,12 +38,13 @@ const Hero = () => {
           // maxHeight: 600,
         }}
         // You can optionally force an aspect ratio for the generated image
-
+        aspectRatio={4 / 5}
         // This is a presentational image, so the alt should be an empty string
         alt="Hero Image"
         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
         src="../images/hero.jpg"
         formats={["auto", "webp", "avif"]}
+        placeholder="tracedSVG"
       />
       <div
         className="hero_overlay"
