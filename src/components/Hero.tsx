@@ -41,7 +41,6 @@ const Hero = () => {
         aspectRatio={4 / 5}
         // This is a presentational image, so the alt should be an empty string
         alt="Hero Image"
-        // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
         src="../images/hero.jpg"
         formats={["auto", "webp", "avif"]}
         placeholder="tracedSVG"
