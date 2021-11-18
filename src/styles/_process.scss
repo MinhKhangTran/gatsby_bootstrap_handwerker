@@ -1,0 +1,19 @@
+#process {
+  h3,
+  p {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #process {
+    .process_wrapper {
+      margin-top: 4rem;
+    }
+    .inactive {
+      opacity: 0.5;
+    }
+    .process_lg_wrapper {
+      cursor: pointer;
+    }
+  }
+}

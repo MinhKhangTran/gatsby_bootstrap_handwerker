@@ -43,7 +43,6 @@ const Hero = () => {
         alt="Hero Image"
         src="../images/hero.jpg"
         formats={["auto", "webp", "avif"]}
-        placeholder="tracedSVG"
       />
       <div
         className="hero_overlay"

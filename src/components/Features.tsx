@@ -27,10 +27,10 @@ const Features = () => {
     <section id="features" className="section">
       <Container>
         <Row>
-          <Col md={4}>
+          <Col md={4} lg={5}>
             <h2 className="text-primary mb-4">Das zeichnet uns aus</h2>
           </Col>
-          <Col md={8}>
+          <Col md={8} lg={7}>
             <Row>
               {featureArray.map((feature) => {
                 return (
