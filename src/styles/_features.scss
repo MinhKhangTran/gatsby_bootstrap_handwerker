@@ -1,0 +1,17 @@
+#features {
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3,
+  p {
+    font-size: 1.125rem;
+  }
+  .feature_icon {
+    background: $green-400;
+    color: white;
+    width: 64px;
+    height: 64px;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+}

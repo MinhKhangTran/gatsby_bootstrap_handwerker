@@ -14,22 +14,34 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-2 fs-5">
-            <Link className="nav-link" to="/#hero">
+            <Link className="nav-link" to="/#hero" style={{ color: "#59625e" }}>
               Home
             </Link>
-            <Link className="nav-link" to="/#features">
+            <Link
+              className="nav-link"
+              to="/#features"
+              style={{ color: "#59625e" }}
+            >
               Merkmale
             </Link>
-            <Link className="nav-link" to="/#process">
+            <Link
+              className="nav-link"
+              to="/#process"
+              style={{ color: "#59625e" }}
+            >
               Prozess
             </Link>
-            <Link className="nav-link" to="/#testimonials">
+            <Link
+              className="nav-link"
+              to="/#testimonials"
+              style={{ color: "#59625e" }}
+            >
               Testimonials
             </Link>
-            <Link className="nav-link" to="/#faq">
+            <Link className="nav-link" to="/#faq" style={{ color: "#59625e" }}>
               FAQ
             </Link>
-            <Link className="nav-link" to="/#team">
+            <Link className="nav-link" to="/#team" style={{ color: "#59625e" }}>
               Unser Team
             </Link>
           </Nav>
