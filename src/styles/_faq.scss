@@ -1,0 +1,11 @@
+#faq {
+  h3 {
+    font-size: 1.125rem;
+  }
+  .fragen {
+    margin-top: 1.5rem;
+  }
+  .fragen:first-child {
+    margin-top: 0rem;
+  }
+}
