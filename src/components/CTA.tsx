@@ -5,7 +5,11 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const CTA = () => {
   return (
-    <section id="cta" className="section">
+    <section
+      style={{ background: "#e5fef3" }}
+      id="cta"
+      className="section py-4"
+    >
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="order-md-2">
