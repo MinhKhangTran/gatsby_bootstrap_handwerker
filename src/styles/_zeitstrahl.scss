@@ -1,0 +1,11 @@
+#zeitstrahl {
+  .punkt {
+    width: 30px;
+    height: 30px;
+    background: $primary;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+}
