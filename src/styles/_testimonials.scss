@@ -10,3 +10,11 @@
     height: 12px;
   }
 }
+@media screen and (min-width: 768px) {
+  #testimonials {
+    .quote_left {
+      top: -5%;
+      left: -5%;
+    }
+  }
+}
