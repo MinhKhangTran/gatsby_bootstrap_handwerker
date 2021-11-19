@@ -1,0 +1,12 @@
+#testimonials {
+  .quote_left {
+    top: 0;
+    left: 0;
+  }
+  .control-dots > * {
+    background: $primary;
+    border-radius: 0;
+    width: 12px;
+    height: 12px;
+  }
+}
