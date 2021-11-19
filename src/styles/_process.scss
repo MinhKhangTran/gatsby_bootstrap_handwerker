@@ -15,8 +15,13 @@
     .inactive {
       opacity: 0.5;
     }
+    .active {
+      border-left: solid 3px $primary;
+    }
     .process_lg_wrapper {
       cursor: pointer;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
     }
   }
 }

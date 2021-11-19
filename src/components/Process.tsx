@@ -49,7 +49,7 @@ const Process = () => {
                     }}
                     key={process.id}
                     className={`${
-                      process.id !== number && "inactive"
+                      process.id === number && "active"
                     } process_lg_wrapper`}
                   >
                     <h3 className="text-primary">{process.title}</h3>
