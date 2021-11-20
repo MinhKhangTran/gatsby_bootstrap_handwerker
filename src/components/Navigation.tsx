@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import React, { useState } from "react";
 import { Container, Nav, Navbar, Button, Offcanvas } from "react-bootstrap";
 import Logo from "../images/LOGO.svg";
-import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {
   return (
