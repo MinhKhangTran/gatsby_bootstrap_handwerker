@@ -10,8 +10,8 @@ const Navigation = () => {
         <Link to="/" className="navbar-brand text-primary">
           <img src={Logo} alt="The handwerker logo" />
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" data-cy="nav_button" />
+        <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="ms-auto gap-2 fs-5">
             <Link className="nav-link" to="/#hero" style={{ color: "#59625e" }}>
               Home
