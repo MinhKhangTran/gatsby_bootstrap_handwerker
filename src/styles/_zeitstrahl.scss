@@ -1,4 +1,7 @@
 #zeitstrahl {
+  h2 {
+    font-size: 1.5rem;
+  }
   .punkt {
     width: 30px;
     height: 30px;
@@ -7,5 +10,22 @@
   }
   p {
     font-size: 1.125rem;
+  }
+  h4 {
+    color: #17804f !important;
+  }
+  .zeit_kasten {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: $green-100;
+      z-index: -1;
+      transform: rotate(45deg);
+      top: -10px;
+      left: 4px;
+    }
   }
 }

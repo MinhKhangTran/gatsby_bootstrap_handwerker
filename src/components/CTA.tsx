@@ -24,19 +24,21 @@ const CTA = () => {
               Meow meow mama lick arm hair yet lick human with sandpaper tongue
               but if human is on laptop
             </p>
-            <article className="d-flex gap-3">
+            <article className="d-flex gap-3 align-items-center mb-3">
               <div>
                 <FaPhoneAlt className="text-primary" size="2em"></FaPhoneAlt>
                 <span className="visually-hidden">Phone</span>
               </div>
-              <p className="text-primary">123 4567 890</p>
+              <p className="cta_sns text-primary fs-4 mb-0">123 4567 890</p>
             </article>
-            <article className="d-flex gap-3 mt-3">
+            <article className="d-flex gap-3 mt-3 align-items-center">
               <div>
                 <FaEnvelope className="text-primary" size="2em"></FaEnvelope>
                 <span className="visually-hidden">E-Mail</span>
               </div>
-              <p className="text-primary">handwerker@example.de</p>
+              <p className="cta_sns text-primary fs-4 mb-0">
+                handwerker@example.de
+              </p>
             </article>
           </Col>
         </Row>

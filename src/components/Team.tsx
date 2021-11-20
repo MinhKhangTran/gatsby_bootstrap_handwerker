@@ -27,7 +27,7 @@ const Team = () => {
                 />
               </div>
               <div>
-                <h2>John Foster Senior</h2>
+                <h3>John Foster Senior</h3>
                 <p className="lead text-secondary subtitle">Founder</p>
               </div>
             </article>
@@ -42,7 +42,7 @@ const Team = () => {
                 />
               </div>
               <div>
-                <h2>John Foster Junior</h2>
+                <h3>John Foster Junior</h3>
                 <p className="lead text-secondary subtitle">Co-Founder</p>
               </div>
             </article>
