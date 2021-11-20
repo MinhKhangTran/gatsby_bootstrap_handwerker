@@ -13,7 +13,9 @@ $secondary: #666f76;
 // font family
 $font-family-base: "Roboto", sans-serif;
 
-// links
+// tooltip
+$tooltip-color: black;
+$tooltip-bg: #d1e7dd;
 
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)

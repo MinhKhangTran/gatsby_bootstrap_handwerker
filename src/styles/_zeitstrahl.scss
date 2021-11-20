@@ -28,4 +28,26 @@
       left: 4px;
     }
   }
+  .jahr {
+    position: absolute;
+    top: -70%;
+    left: 100%;
+    transform: rotate(-30deg);
+    transform-origin: left;
+  }
+  .strahl {
+    height: 15px;
+    width: 100%;
+    background: $green-100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #zeitstrahl {
+    margin-bottom: 10rem;
+  }
 }

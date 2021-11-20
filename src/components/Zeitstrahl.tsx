@@ -1,7 +1,9 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const Zeitstrahl = () => {
+  let isWidePage = useMediaQuery("(min-width: 992px)");
   const zeitstrahlArray = [
     {
       id: 1,
@@ -24,6 +26,77 @@ const Zeitstrahl = () => {
       text: "yet sleeps on my head stare at wall turn and meow stare at wall some more meow again continue staring flex claws on the human's belly and purr like a lawnmower. Meow cat meoooow i iz master of hoomaan",
     },
   ];
+  if (isWidePage) {
+    return (
+      <section id="zeitstrahl" className="section">
+        <Container>
+          <div className="position-relative d-flex justify-content-between">
+            <div className="position-relative">
+              <OverlayTrigger
+                placement="bottom-start"
+                overlay={
+                  <Tooltip id="tooltip-1" className="">
+                    Wake up wander around the house making large amounts of
+                    noise jump on top of your human's bed and fall asleep
+                  </Tooltip>
+                }
+              >
+                <div className="punkt"></div>
+              </OverlayTrigger>
+              <h4 className="jahr text-primary mb-0">1993</h4>
+            </div>
+            <div className="position-relative">
+              <OverlayTrigger
+                placement="bottom-start"
+                overlay={
+                  <Tooltip id="tooltip-1" className="">
+                    again nyan nyan goes the cat, scraaaaape scraaaape goes the
+                    walls when the cat murders them with its claws.
+                  </Tooltip>
+                }
+              >
+                <div className="punkt"></div>
+              </OverlayTrigger>
+              <h4 className="jahr text-primary mb-0">2000</h4>
+            </div>
+            <div className="position-relative">
+              <OverlayTrigger
+                placement="bottom-start"
+                overlay={
+                  <Tooltip id="tooltip-1" className="">
+                    Lounge in doorway the fat cat sat on the mat bat away with
+                    paws and dream about hunting birds or bite plants making
+                    sure that fluff gets into the owner's eyes. Rub my belly
+                    hiss lounge in doorway
+                  </Tooltip>
+                }
+              >
+                <div className="punkt"></div>
+              </OverlayTrigger>
+              <h4 className="jahr text-primary mb-0">2008</h4>
+            </div>
+            <div className="position-relative">
+              <OverlayTrigger
+                placement="bottom-start"
+                overlay={
+                  <Tooltip id="tooltip-1" className="">
+                    yet sleeps on my head stare at wall turn and meow stare at
+                    wall some more meow again continue staring flex claws on the
+                    human's belly and purr like a lawnmower. Meow cat meoooow i
+                    iz master of hoomaan
+                  </Tooltip>
+                }
+              >
+                <div className="punkt"></div>
+              </OverlayTrigger>
+              <h4 className="jahr text-primary mb-0">2020</h4>
+            </div>
+            <div className="strahl"></div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
   return (
     <section id="zeitstrahl" className="mt-4">
       <Container>
